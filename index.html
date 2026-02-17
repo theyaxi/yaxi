@@ -4,7 +4,6 @@
 <title>Yaxi Community</title>
 
 <style>
-
 *{
   margin:0;
   padding:0;
@@ -18,13 +17,14 @@ body{
   align-items:center;
   flex-direction:column;
   font-family:Arial, sans-serif;
-  background:url("bg.jpg") no-repeat center center/cover;
+  background:url("bg.gif") no-repeat center center/cover;
   text-align:center;
   color:white;
+  position:relative;
 }
 
 /* Dark overlay */
-body::before{
+body::after{
   content:"";
   position:absolute;
   top:0;
@@ -32,10 +32,9 @@ body::before{
   width:100%;
   height:100%;
   background:rgba(0,0,0,0.6);
-  z-index:-1;
+  z-index:0;
 }
 
-/* Title */
 h1{
   font-size:70px;
   letter-spacing:3px;
@@ -45,16 +44,16 @@ h1{
     0 0 20px #00c6ff,
     0 0 40px #0072ff;
   animation: glow 2s infinite alternate;
+  z-index:1;
 }
 
-/* Owner */
 .owner{
   margin-top:15px;
   font-size:22px;
   color:#ccc;
+  z-index:1;
 }
 
-/* Discord Button */
 .discord-btn{
   margin-top:40px;
   padding:15px 40px;
@@ -65,6 +64,7 @@ h1{
   border-radius:10px;
   transition:0.3s;
   box-shadow:0 0 15px #0072ff;
+  z-index:1;
 }
 
 .discord-btn:hover{
@@ -72,7 +72,6 @@ h1{
   transform:scale(1.1);
 }
 
-/* Glow Animation */
 @keyframes glow{
   from{
     text-shadow:
@@ -87,7 +86,6 @@ h1{
       0 0 60px #0072ff;
   }
 }
-
 </style>
 </head>
 
