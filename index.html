@@ -3,88 +3,74 @@
 <head>
 <title>Yaxi Community</title>
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
 }
 
 body{
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  flex-direction:column;
-  font-family:Arial, sans-serif;
-  background:url("bg.gif") no-repeat center center/cover;
-  text-align:center;
-  color:white;
-  position:relative;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    color:white;
+    background:url("bg.png") no-repeat center center fixed;
+    background-size:cover;
 }
 
 /* Dark overlay */
-body::after{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.6);
-  z-index:0;
+body::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    z-index:0;
 }
 
 h1{
-  font-size:70px;
-  letter-spacing:3px;
-  color:#00c6ff;
-  text-shadow:
-    0 0 10px #00c6ff,
-    0 0 20px #00c6ff,
-    0 0 40px #0072ff;
-  animation: glow 2s infinite alternate;
-  z-index:1;
+    font-size:60px;
+    letter-spacing:3px;
+    color:#00c6ff;
+    text-shadow:
+        0 0 10px #00c6ff,
+        0 0 20px #00c6ff,
+        0 0 40px #0072ff;
+    z-index:1;
 }
 
 .owner{
-  margin-top:15px;
-  font-size:22px;
-  color:#ccc;
-  z-index:1;
+    margin-top:15px;
+    font-size:22px;
+    color:#ccc;
+    z-index:1;
 }
 
 .discord-btn{
-  margin-top:40px;
-  padding:15px 40px;
-  font-size:20px;
-  background:#0072ff;
-  color:white;
-  text-decoration:none;
-  border-radius:10px;
-  transition:0.3s;
-  box-shadow:0 0 15px #0072ff;
-  z-index:1;
+    margin-top:40px;
+    padding:15px 40px;
+    font-size:20px;
+    background:#0072ff;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    transition:0.3s;
+    box-shadow:0 0 15px #0072ff;
+    z-index:1;
 }
 
 .discord-btn:hover{
-  background:#0055cc;
-  transform:scale(1.1);
-}
-
-@keyframes glow{
-  from{
-    text-shadow:
-      0 0 10px #00c6ff,
-      0 0 20px #00c6ff,
-      0 0 40px #0072ff;
-  }
-  to{
-    text-shadow:
-      0 0 20px #00c6ff,
-      0 0 40px #00c6ff,
-      0 0 60px #0072ff;
-  }
+    background:#0055cc;
+    transform:scale(1.1);
 }
 </style>
 </head>
@@ -94,7 +80,7 @@ h1{
 <h1>Yaxi Community</h1>
 
 <div class="owner">
-Owner : <strong>Evil</strong>
+Owner: <strong>! Evił 🌟</strong>
 </div>
 
 <a href="https://discord.gg/UyGjVeBNc" target="_blank" class="discord-btn">
