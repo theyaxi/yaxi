@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Yaxi Community</title>
-
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yaxi Community</title>
 
 <style>
 *{
@@ -21,11 +21,22 @@ body{
     flex-direction:column;
     text-align:center;
     color:white;
-    background:url("bg.png") no-repeat center center fixed;
-    background-size:cover;
+    overflow:hidden;
+
+    /* BLUE NEON BACKGROUND */
+    background: linear-gradient(
+        135deg,
+        #000814,
+        #001d3d,
+        #003566,
+        #0077b6,
+        #00b4ff
+    );
+    background-size:400% 400%;
+    animation:blueMove 12s ease infinite;
 }
 
-/* Dark overlay */
+/* Soft Neon Glow Overlay */
 body::before{
     content:"";
     position:absolute;
@@ -33,21 +44,24 @@ body::before{
     left:0;
     width:100%;
     height:100%;
-    background:rgba(0,0,0,0.6);
+    background: radial-gradient(circle at 20% 30%, #00bfff33, transparent 40%),
+                radial-gradient(circle at 80% 70%, #007bff33, transparent 40%);
     z-index:0;
 }
 
+/* Title */
 h1{
     font-size:60px;
     letter-spacing:3px;
     color:#00c6ff;
     text-shadow:
         0 0 10px #00c6ff,
-        0 0 20px #00c6ff,
-        0 0 40px #0072ff;
+        0 0 25px #00c6ff,
+        0 0 50px #0072ff;
     z-index:1;
 }
 
+/* Owner */
 .owner{
     margin-top:15px;
     font-size:22px;
@@ -55,22 +69,30 @@ h1{
     z-index:1;
 }
 
+/* Discord Button */
 .discord-btn{
     margin-top:40px;
     padding:15px 40px;
     font-size:20px;
-    background:#0072ff;
+    background:linear-gradient(45deg,#0072ff,#00c6ff);
     color:white;
     text-decoration:none;
-    border-radius:8px;
+    border-radius:10px;
     transition:0.3s;
-    box-shadow:0 0 15px #0072ff;
+    box-shadow:0 0 20px #00bfff;
     z-index:1;
 }
 
 .discord-btn:hover{
-    background:#0055cc;
     transform:scale(1.1);
+    box-shadow:0 0 40px #00bfff;
+}
+
+/* Background Animation */
+@keyframes blueMove{
+    0%{ background-position:0% 50%; }
+    50%{ background-position:100% 50%; }
+    100%{ background-position:0% 50%; }
 }
 </style>
 </head>
